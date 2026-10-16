@@ -1,0 +1,31 @@
+{
+  "balanced_accuracy": 0.7222222222222222,
+  "f1": 0.42857142857142855,
+  "precision": 0.2727272727272727,
+  "recall": 1.0,
+  "brier": 0.14713475533753345,
+  "decision_threshold": 0.2,
+  "roc_auc": 0.7101851851851853,
+  "average_precision": 0.26116360131382693,
+  "train_end": "2024-04-01",
+  "test_start": "2024-07-01",
+  "train_rows": 290,
+  "test_rows": 87,
+  "feature_columns": [
+    "broad_spectrum_items_per_1000",
+    "prescribing_change_4q",
+    "prescribing_slope_4q",
+    "resistance_percent",
+    "resistance_change_4q",
+    "n_tested",
+    "percent_tested",
+    "age65_share",
+    "age80_share",
+    "imd_score",
+    "diabetes_prevalence",
+    "ckd_prevalence",
+    "copd_prevalence",
+    "cancer_prevalence"
+  ],
+  "algorithm": "random_forest"
+}

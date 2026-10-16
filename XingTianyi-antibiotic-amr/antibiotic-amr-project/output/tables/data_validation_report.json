@@ -1,0 +1,100 @@
+[
+  {
+    "dataset": "prescribing",
+    "check": "required_columns",
+    "passed": true,
+    "severity": "error",
+    "detail": "missing=[]"
+  },
+  {
+    "dataset": "prescribing",
+    "check": "parseable_dates",
+    "passed": true,
+    "severity": "error",
+    "detail": "valid_share=1.000"
+  },
+  {
+    "dataset": "prescribing",
+    "check": "unique_area_month",
+    "passed": true,
+    "severity": "error",
+    "detail": "duplicates=0"
+  },
+  {
+    "dataset": "prescribing",
+    "check": "plausible_rate",
+    "passed": true,
+    "severity": "error",
+    "detail": "outside_[0,1000]=0"
+  },
+  {
+    "dataset": "prescribing",
+    "check": "rate_missingness",
+    "passed": true,
+    "severity": "warning",
+    "detail": "missing_share=0.000"
+  },
+  {
+    "dataset": "resistance",
+    "check": "discoverable_core_columns",
+    "passed": true,
+    "severity": "error",
+    "detail": "mapping={'date': 'parsed_date', 'area': 'requested_geography', 'metric': 'requested_metric', 'value': 'metric_value'}"
+  },
+  {
+    "dataset": "resistance",
+    "check": "parseable_dates",
+    "passed": true,
+    "severity": "error",
+    "detail": "valid_share=1.000"
+  },
+  {
+    "dataset": "resistance",
+    "check": "metric_PercentResistant",
+    "passed": true,
+    "severity": "error",
+    "detail": "present=True"
+  },
+  {
+    "dataset": "resistance",
+    "check": "metric_NumberTested",
+    "passed": true,
+    "severity": "error",
+    "detail": "present=True"
+  },
+  {
+    "dataset": "resistance",
+    "check": "numeric_values",
+    "passed": true,
+    "severity": "error",
+    "detail": "numeric_share=1.000"
+  },
+  {
+    "dataset": "covariates",
+    "check": "required_columns",
+    "passed": true,
+    "severity": "error",
+    "detail": "missing=[]"
+  },
+  {
+    "dataset": "covariates",
+    "check": "unique_area_year",
+    "passed": true,
+    "severity": "error",
+    "detail": "duplicates=0"
+  },
+  {
+    "dataset": "covariates",
+    "check": "range_age65_share",
+    "passed": true,
+    "severity": "error",
+    "detail": "outside_[0,1]=0"
+  },
+  {
+    "dataset": "covariates",
+    "check": "range_age80_share",
+    "passed": true,
+    "severity": "error",
+    "detail": "outside_[0,1]=0"
+  }
+]

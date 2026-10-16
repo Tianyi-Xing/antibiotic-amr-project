@@ -1,0 +1,59 @@
+project:
+  random_seed: 2026
+  start_date: "2021-04-01"
+  end_date: "2026-04-30"
+  intervention_date: "2023-04-01"
+
+paths:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  external_dir: "data/external"
+  model_dir: "output/model"
+  figure_dir: "figures"
+  table_dir: "output/tables"
+  prescribing_file: "openprescribing_broad_spectrum_sicbl.csv"
+  resistance_file: "ukhsa_ecoli_bacteraemia_long.csv"
+  covariates_file: "covariates_area_year.csv"
+  boundaries_file: "openprescribing_sicbl_boundaries.geojson"
+
+analysis:
+  primary_antibiotics: ["co-amoxiclav"]
+  quarterly_anchor_months: [1, 4, 7, 10]
+  minimum_tested: 20
+  minimum_area_quarters: 12
+  lag_quarters: [1, 2, 3, 4]
+  improvement_threshold_pp: 0.5
+  prescribing_reduction_threshold: 0.0
+  change_window_quarters: 4
+  cluster_count: 4
+
+model:
+  algorithm: "random_forest"
+  n_estimators: 250
+  max_depth: 6
+  min_samples_leaf: 3
+  test_quarters: 4
+  rolling_test_quarters: 2
+  class_weight: "balanced"
+  feature_columns:
+    - broad_spectrum_items_per_1000
+    - prescribing_change_4q
+    - prescribing_slope_4q
+    - resistance_percent
+    - resistance_change_4q
+    - n_tested
+    - percent_tested
+    - age65_share
+    - age80_share
+    - imd_score
+    - diabetes_prevalence
+    - ckd_prevalence
+    - copd_prevalence
+    - cancer_prevalence
+
+scenario:
+  horizon_quarters: 4
+  peer_cluster_count: 5
+  intervention_feature: "broad_spectrum_items_per_1000"
+  target_quantile: 0.5

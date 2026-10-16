@@ -1,0 +1,15 @@
+dataset,check,passed,severity,detail
+prescribing,required_columns,True,error,missing=[]
+prescribing,parseable_dates,True,error,valid_share=1.000
+prescribing,unique_area_month,True,error,duplicates=0
+prescribing,plausible_rate,True,error,"outside_[0,1000]=0"
+prescribing,rate_missingness,True,warning,missing_share=0.000
+resistance,discoverable_core_columns,True,error,"mapping={'date': 'parsed_date', 'area': 'requested_geography', 'metric': 'requested_metric', 'value': 'metric_value'}"
+resistance,parseable_dates,True,error,valid_share=1.000
+resistance,metric_PercentResistant,True,error,present=True
+resistance,metric_NumberTested,True,error,present=True
+resistance,numeric_values,True,error,numeric_share=1.000
+covariates,required_columns,True,error,missing=[]
+covariates,unique_area_year,True,error,duplicates=0
+covariates,range_age65_share,True,error,"outside_[0,1]=0"
+covariates,range_age80_share,True,error,"outside_[0,1]=0"

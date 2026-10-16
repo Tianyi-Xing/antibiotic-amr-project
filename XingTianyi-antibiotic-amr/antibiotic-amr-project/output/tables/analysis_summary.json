@@ -1,0 +1,20 @@
+{
+  "panel_rows": 840,
+  "areas": 40,
+  "antibiotics": [
+    "co-amoxiclav"
+  ],
+  "quarter_min": "2021-04-01",
+  "quarter_max": "2026-04-01",
+  "trajectory_class_counts": {
+    "prescribing_down_resistance_not_down": 10,
+    "prescribing_not_down_resistance_down": 10,
+    "neither_improved": 10,
+    "prescribing_down_resistance_down": 10
+  },
+  "clustering_metrics": {
+    "silhouette_precomputed": 0.48950534117960165,
+    "adjusted_rand_vs_synthetic_truth": 1.0
+  },
+  "its_estimable": true
+}
